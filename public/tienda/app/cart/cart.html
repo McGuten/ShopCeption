@@ -1,0 +1,75 @@
+<div ng-controller="cartController">
+
+  <div class="container">
+    <div class="col s12 m12">
+      <div class="card" ng-hide="!message">
+        <div class="card-content">
+          <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+            </tr>
+            <tr ng-repeat="item in cart">
+              <td>{{item.product}}</td>
+              <td>{{item.qty}}</td>
+              <td>
+                {{item.price}}
+              </td>
+              <td>
+                <a href="" ng-click="removeItem(item)" <i class="material-icons">delete</i>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="card-action">
+            <div class="col">
+              <a class='btn' data-target='demoModal' modal>Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-hide="message">
+        <div class="col s12 m12">
+        <div class="card">
+          <div class="card-content">
+            <h4> Vacio </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="demoModal" class="modal" ng-hide="!message">
+      <div class="modal-content">
+        <h4>Carrito</h4>
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+          </tr>
+          <tr ng-repeat="item in cart">
+            <td>{{item.product}}</td>
+            <td>{{item.qty}}</td>
+            <td>
+              {{item.price}}
+            </td>
+          </tr>
+          <tr class="border">
+            <td></td>
+            <td></td>
+            <td>
+              {{totalprice}}
+            </td>
+          </tr>
+
+        </table>
+      </div>
+      <div class="modal-footer">
+        <div>
+          <button class="waves-effect waves-light btn" ng-click="resetCart()">Vaciar Carrito</button>
+        </div>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+  </div>

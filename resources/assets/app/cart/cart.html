@@ -1,0 +1,134 @@
+<div ng-controller="cartController">
+  <nav class="lighbutton: ;border-top: ;t-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#/" class="brand-logo">{{shopname}}</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#/"></a></li>
+        <li><a href="#/items">Productos</a></li>
+        <li><a href="#/contact">Contacto</a></li>
+        <li><a href="#/cart"><i class="material-icons">shopping_cart</i></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#/items">Productos</a></li>
+        <li><a href="#/contact">Contacto</a></li>
+        <li><a href="#/cart"><i class="material-icons">shopping_cart</i></a></li>
+      </ul>
+      <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="150" data-closeonclick="false">
+        <i class="material-icons">menu</i>
+      </a>
+
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <div class="row center">
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="card-content">
+          <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+            </tr>
+            <tr ng-repeat="item in cart">
+              <td>{{item.product}}</td>
+              <td>{{item.qty}}</td>
+              <td>
+                {{item.price}}
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="card-action">
+          <div class="col">
+            <a class='btn' data-target='demoModal' modal>Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="demoModal" class="modal">
+    <div class="modal-content">
+      <h4>Carrito</h4>
+      <table>
+        <tr>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+        </tr>
+        <tr ng-repeat="item in cart">
+          <td>{{item.product}}</td>
+          <td>{{item.qty}}</td>
+          <td>
+            {{item.price}}
+          </td>
+        </tr>
+        <tr class="border">
+          <td></td>
+          <td></td>
+          <td >
+            {{totalprice}}
+          </td>
+        </tr>
+
+      </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4"></p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+</div>

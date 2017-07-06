@@ -1,0 +1,108 @@
+<div ng-controller="itemsController">
+  <div class="fixed-action-btn" ng-hide="!message">
+    <a class="btn-floating btn-large red" ng-click="toggleSearch()">
+      <i class="large material-icons">search</i>
+    </a>
+  </div>
+  <div class="section no-pad-bot" id="index-banner" ng-show="toggle">
+    <div class="container">
+      <div class="row center">
+        <div class="input-field">
+          <input id="search" type="search" ng-model="query" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+  <div class="row" ng-hide="!message">
+    <div class="card-panel container button-collapse">
+      <div class="">
+        <a href="#" class="" data-activates="nav-menu" data-sidenav="right" data-menuwidth="200" data-closeonclick="false">
+          <i class="material-icons">filter_list</i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" >
+    <div class="col s4 m2 hide-on-med-and-down" ng-hide="!message">
+      <div class="card-panel ">
+        <div class="card-content">
+          <span class="card-title">Categorias</span>
+          <form action="#">
+            <p ng-repeat="tag in noduplicates">
+              <input name="tags" type="radio" id="{{tag.name}}" value="{{tag.name}}" id="{{tag.name}}" ng-model="filtertag" ng-click="changeTag(filtertag)" />
+              <label for="{{tag.name}}">{{tag.name}}</label>
+            </p>
+          </form>
+          <div input-field>
+            <select class="" ng-model="order" ng-change="changeOrder(order)" material-select watch>
+              <option value="+price">Orden Ascendente</option>
+              <option value="-price">Orden Descendente</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="nav-menu" class="side-nav">
+      <form action="#">
+        <ul class="filter">
+          <p ng-repeat="tag in noduplicates">
+            <input name="tags" type="radio" id="{{tag.name}}" value="{{tag.name}}" id="{{tag.name}}" ng-model="filtertag" ng-click="changeTag(filtertag)" />
+            <label for="{{tag.name}}">{{tag.name}}</label>
+          </p>
+        </ul>
+
+      </form>
+    </div>
+
+
+    <div class="col s12 m10">
+      <div class="items flex-container" ng-hide="!message" >
+        <div class="card flex-item" ng-repeat="item in items | filter:query | orderBy:order | filter:filtertag  ">
+          <div class="card-image ">
+            <img class="activator responsive-img image-card" src="{{item.image}}">
+            <a class="btn-floating halfway-fab waves-effect waves-light red" ng-click="addToCart(item,qty)"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <span class="card-title grey-text text-darken-4 activator">{{item.name}} <i class="material-icons">info_outline</i></span>
+            <table>
+              <tr>
+                <td>
+                  <div input-field class="select-qty">
+                    <input type="number" ng-model="item.qty" ng-change="updateQty(item.qty)" min="1" value="{{defaultqty}}">
+                    <label>Cantidad </label>
+                  </div>
+                </td>
+                <td>
+                  <div class="chip">
+                    {{item.price + item.currency }}
+                  </div>
+                </td>
+
+              </tr>
+            </table>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">{{item.name}} <i class="material-icons right">close</i></span>
+            <p>{{item.description}} </p>
+          </div>
+
+        </div>
+      </div>
+  </div>
+  <div ng-hide="message" class="center">
+    <div class="">
+      <div class="card">
+        <div class="card-content ">
+          <span class="card-title">No hay items añadidos</span>
+          <p>No hay items</p>
+        </div>
+      </div>
+    </div>
+</div>
+</div>

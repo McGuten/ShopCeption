@@ -1,0 +1,1200 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>documentacion.html</title>
+<style>
+* {
+    overflow: visible !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    box-decoration-break: clone;
+}
+
+html, body {
+    background: #FFF;
+    font-family: "Segoe UI", Arial, freesans, sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #333;
+    word-wrap: break-word;
+	hyphens: auto;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 4px solid #EEE;
+}
+
+code {
+    padding: .1em .4em;
+    display: inline-block;
+    background-color: #f9f2f4;
+    color: #c7254e;
+    border-radius: 3px;
+    border: 0 none;
+    font: 9px Consolas, "Liberation Mono", Menlo, "Courier New", Courier, monospace;
+    hyphens: manual;
+}
+
+pre code {
+    padding: 15px;
+    display: block;
+    background-color: #F9F9F9;
+    color: #555;
+    font-size: 10px;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .08);
+    word-wrap: normal;
+}
+
+/* replace light background for some hljs themes */
+code.github-css,
+code.github-gist-css,
+code.tomorrow-css,
+code.default-css,
+code.googlecode-css,
+code.ascetic-css,
+code.color-brewer-css,
+code.grayscale-css,
+code.idea-css,
+code.vs-css,
+code.xcode-css {
+    background-color: #F9F9F9 !important;
+}
+
+blockquote {
+    padding: 10px;
+    margin-left: 0;
+    color: #666;
+    border: 0 none;
+    border-left: 4px solid #EEE;
+}
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #FFF;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #DDD;
+}
+
+table div {
+    page-break-inside: avoid;
+}
+
+th, td {
+    text-align: left;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    padding: 8px 14px;
+    vertical-align: top;
+    border-top: 1px solid #DDD;
+}
+
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+
+table > tbody + tbody {
+    border-top: 2px solid #DDD;
+}
+
+table table {
+    background-color: #FFF;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    border: 1px solid #DDD;
+}
+
+table > thead > tr > th,
+table > thead > tr > td {
+    border-bottom-width: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 90%;
+}
+
+table > tbody > tr:nth-of-type(odd) {
+    background-color: #F9F9F9;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 1.1;
+    color: #111;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+    page-break-after: avoid;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 11px;
+}
+
+h5, h6 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+    position: relative;
+    bottom: 1px;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+ul li,
+ol li {
+    margin-bottom: 2px;
+}
+
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #4078C0;
+}
+
+.new-page,
+.page-break,
+.next-page,
+.page-end {
+    page-break-before: always;
+}
+
+#pageHeader,
+#pageHeader a,
+#pageHeader a:visited {
+    color: #777;
+}
+
+#pageHeader span {
+    vertical-align: middle;
+}
+
+#pageFooter {
+    border-top: 1px solid #EEE;
+    padding-top: 5px;
+    color: #777;
+    font-size: 80%;
+}
+#pageFooter a,
+#pageFooter a:visited {
+    color: #777;
+}
+
+/**
+ * Your markdown-themeable-pdf custom styles
+ *
+ * The default file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/templates
+ * The base css file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/css
+ * The current highlight.js css file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/node_modules/highlight.js/styles
+ */
+
+/*
+html, body {
+	color: red;
+}
+*/
+
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+.hljs {
+  display: block;
+  background: white;
+  padding: 0.5em;
+  color: #333333;
+  overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-meta {
+  color: #969896;
+}
+
+.hljs-string,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+  color: #df5000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: #a71d5d;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+  color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+  color: #63a35c;
+}
+
+.hljs-tag {
+  color: #333333;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #795da3;
+}
+
+.hljs-addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+
+.hljs-deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+
+</style>
+</head>
+<body>
+<div id="pageContent">
+<h1 id="shopception"><strong>ShopCeption</strong></h1>
+<h2 id="indice-del-proyecto"><strong>Indice del proyecto</strong></h2>
+<ol>
+<li>Descripción y objetivos del proyecto (especificaciones).</li>
+<li>Cronograma. Evolución en los diagramas de GANTT.</li>
+<li>Diseño lógico: Análisis de los datos (modelo E/R).</li>
+<li>Diseño físico de los datos (Descripción y script de creación de tablas).</li>
+<li>Descripción de los procesos (Módulos de programación).</li>
+<li>Mapa de navegación.</li>
+<li>Código de los módulos y captura de pantallas.</li>
+<li>Recursos y bibliografía utilizada.</li>
+<li>Observaciones y comentarios sobre el desarrollo del proyecto (dificultades, soluciones encontradas…..,etc)</li>
+</ol>
+<h2 id="descripcion-y-objetivos"><strong>Descripcion y objetivos</strong></h2>
+<p>Hacer una pagina web capaz de dar soporte a una persona o compañia que quiera crear su tienda.
+Los objetivos son:</p>
+<ul>
+<li>Dar soporte de bases de datos</li>
+<li>Panel de administracion de productos</li>
+</ul>
+<h2 id="cronograma"><strong>Cronograma</strong></h2>
+<p><img src="01.png" alt=""></p>
+<h2 id="diseno-logico-modelo-entidad-relacion"><strong>Diseño lógico: Modelo entidad relacion</strong></h2>
+<p><img src="02.png" alt=""></p>
+<h2 id="diseno-fisico"><strong>Diseño físico</strong></h2>
+<p><strong>Items</strong>: Items dentro de las tiendas de <a href="shopception.tk">ShopCeption</a></p>
+<pre><code class="hljs github-gist-css sql"><span class="hljs-comment">-- phpMyAdmin SQL Dump</span>
+<span class="hljs-comment">-- version 4.5.4.1deb2ubuntu2</span>
+<span class="hljs-comment">-- http://www.phpmyadmin.net</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Servidor: localhost</span>
+<span class="hljs-comment">-- Tiempo de generación: 11-06-2017 a las 11:49:59</span>
+<span class="hljs-comment">-- Versión del servidor: 5.7.17-0ubuntu0.16.04.2</span>
+<span class="hljs-comment">-- Versión de PHP: 7.0.15-0ubuntu0.16.04.4</span>
+
+<span class="hljs-keyword">SET</span> SQL_MODE = <span class="hljs-string">"NO_AUTO_VALUE_ON_ZERO"</span>;
+<span class="hljs-keyword">SET</span> <span class="hljs-keyword">time_zone</span> = <span class="hljs-string">"+00:00"</span>;
+
+
+<span class="hljs-comment">/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */</span>;
+<span class="hljs-comment">/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */</span>;
+<span class="hljs-comment">/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */</span>;
+<span class="hljs-comment">/*!40101 SET NAMES utf8mb4 */</span>;
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Base de datos: `shopception`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">-- --------------------------------------------------------</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Estructura de tabla para la tabla `items`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`items`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">UNSIGNED</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">25</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`price`</span> <span class="hljs-keyword">double</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`currency`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">2</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`tag`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`stock`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">6</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`image`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`description`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`shop_id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`created_at`</span> <span class="hljs-keyword">timestamp</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`updated_at`</span> <span class="hljs-keyword">timestamp</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8mb4 <span class="hljs-keyword">COLLATE</span>=utf8mb4_unicode_ci;
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Volcado de datos para la tabla `items`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`items`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>, <span class="hljs-string">`price`</span>, <span class="hljs-string">`currency`</span>, <span class="hljs-string">`tag`</span>, <span class="hljs-string">`stock`</span>, <span class="hljs-string">`image`</span>, <span class="hljs-string">`description`</span>, <span class="hljs-string">`shop_id`</span>, <span class="hljs-string">`created_at`</span>, <span class="hljs-string">`updated_at`</span>) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-number">1</span>, <span class="hljs-string">'TralaraItem1'</span>, <span class="hljs-number">200</span>, <span class="hljs-string">'€'</span>, <span class="hljs-string">'TralaraCat'</span>, <span class="hljs-string">'10'</span>, <span class="hljs-string">'http://www.lahiguera.net/musicalia/artistas/conchita/disco/6000/tema/8178/conchita_tralara-portada.jpg'</span>, <span class="hljs-string">'Esto es un tralará de campeonato'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>),
+(<span class="hljs-number">2</span>, <span class="hljs-string">'Naxus 5'</span>, <span class="hljs-number">499.99</span>, <span class="hljs-string">'$'</span>, <span class="hljs-string">'Moviles'</span>, <span class="hljs-string">'5'</span>, <span class="hljs-string">'https://i.blogs.es/9f2e3f/nexus-5-1-1/original.jpg'</span>, <span class="hljs-string">'Movil que te cagas, loco'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>),
+(<span class="hljs-number">3</span>, <span class="hljs-string">'name'</span>, <span class="hljs-number">20</span>, <span class="hljs-string">'€'</span>, <span class="hljs-string">'tag'</span>, <span class="hljs-string">'9999'</span>, <span class="hljs-string">'https://i.blogs.es/9f2e3f/nexus-5-1-1/original.jpg'</span>, <span class="hljs-string">'otra imagen, que sino nos vamos a rallá, loco'</span>, <span class="hljs-number">2</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>),
+(<span class="hljs-number">4</span>, <span class="hljs-string">'Putotron 5000'</span>, <span class="hljs-number">600</span>, <span class="hljs-string">'€'</span>, <span class="hljs-string">'Moviles'</span>, <span class="hljs-string">'99999'</span>, <span class="hljs-string">'http://modoeficaz.com/wp-content/uploads/2015/04/¿Cómo-evitar-mirar-el-móvil-a-cada-momento-.jpg'</span>, <span class="hljs-string">'Putotron 5000'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>),
+(<span class="hljs-number">5</span>, <span class="hljs-string">'Tralara'</span>, <span class="hljs-number">12</span>, <span class="hljs-string">'€'</span>, <span class="hljs-string">'Tralara'</span>, <span class="hljs-string">'12'</span>, <span class="hljs-string">'http://img.desmotivaciones.es/201109/act_of_dislocation_by_les_diablesd3fmuma.jpg'</span>, <span class="hljs-string">'Tralará del bueno'</span>, <span class="hljs-number">7</span>, <span class="hljs-string">'2017-06-10 06:54:21'</span>, <span class="hljs-string">'2017-06-10 06:54:21'</span>),
+(<span class="hljs-number">6</span>, <span class="hljs-string">'LGG3'</span>, <span class="hljs-number">500</span>, <span class="hljs-string">'€'</span>, <span class="hljs-string">'Tecnología'</span>, <span class="hljs-string">'69'</span>, <span class="hljs-string">'http://moviltoday.com/wp-content/uploads/2014/10/lg_G3_06.jpg'</span>, <span class="hljs-string">'Móvil mu rechulón'</span>, <span class="hljs-number">10</span>, <span class="hljs-string">'2017-06-10 09:19:44'</span>, <span class="hljs-string">'2017-06-10 09:19:44'</span>),
+(<span class="hljs-number">7</span>, <span class="hljs-string">'Robocop'</span>, <span class="hljs-number">2.5</span>, <span class="hljs-string">'€'</span>, <span class="hljs-string">'Futuro'</span>, <span class="hljs-string">'2'</span>, <span class="hljs-string">'http://site.lacosacine.com/img/cine/rdw9v1y__1486912765.jpeg'</span>, <span class="hljs-string">'Robot mu rechulón'</span>, <span class="hljs-number">10</span>, <span class="hljs-string">'2017-06-10 09:21:34'</span>, <span class="hljs-string">'2017-06-10 09:21:34'</span>),
+(<span class="hljs-number">8</span>, <span class="hljs-string">'Casa'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'$'</span>, <span class="hljs-string">'Hogar'</span>, <span class="hljs-string">'1'</span>, <span class="hljs-string">'http://www.canexel.es/wp-content/uploads/2012/09/chalet_piloto4.jpg'</span>, <span class="hljs-string">'Casa mu rechulona'</span>, <span class="hljs-number">10</span>, <span class="hljs-string">'2017-06-10 09:22:58'</span>, <span class="hljs-string">'2017-06-10 09:22:58'</span>),
+(<span class="hljs-number">9</span>, <span class="hljs-string">'BQES2'</span>, <span class="hljs-number">250</span>, <span class="hljs-string">'$'</span>, <span class="hljs-string">'Tecnología'</span>, <span class="hljs-string">'2'</span>, <span class="hljs-string">'http://comprarmovilesya.com/wp-content/uploads/2015/04/BQ-Aquaris-E5-4G.jpg'</span>, <span class="hljs-string">'Móvil mu rechulón v2'</span>, <span class="hljs-number">10</span>, <span class="hljs-string">'2017-06-10 09:24:29'</span>, <span class="hljs-string">'2017-06-10 09:24:29'</span>),
+(<span class="hljs-number">10</span>, <span class="hljs-string">'floripondio'</span>, <span class="hljs-number">555.446</span>, <span class="hljs-string">'€'</span>, <span class="hljs-string">'esteicono'</span>, <span class="hljs-string">'89'</span>, <span class="hljs-string">'https://www.serishirts.com/32900-54012-tm_large_default/bart-simpson-t-shirt-is-pablo-escobar.jpg'</span>, <span class="hljs-string">'sad asd asd dw wad wadawd aw d'</span>, <span class="hljs-number">11</span>, <span class="hljs-string">'2017-06-10 14:59:14'</span>, <span class="hljs-string">'2017-06-10 14:59:14'</span>),
+(<span class="hljs-number">11</span>, <span class="hljs-string">'Peine'</span>, <span class="hljs-number">5</span>, <span class="hljs-string">'€'</span>, <span class="hljs-string">'hogas'</span>, <span class="hljs-string">'10'</span>, <span class="hljs-string">'http://telloprofesional.com/2859-thickbox_default/peine-ancho-caballero-419-comair.jpg'</span>, <span class="hljs-string">'Peine que mola mazo'</span>, <span class="hljs-number">12</span>, <span class="hljs-string">'2017-06-10 20:03:57'</span>, <span class="hljs-string">'2017-06-10 20:03:57'</span>);
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Índices para tablas volcadas</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Indices de la tabla `items`</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`items`</span>
+  <span class="hljs-keyword">ADD</span> PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>);
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- AUTO_INCREMENT de las tablas volcadas</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- AUTO_INCREMENT de la tabla `items`</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`items`</span>
+  <span class="hljs-keyword">MODIFY</span> <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">UNSIGNED</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT, AUTO_INCREMENT=<span class="hljs-number">12</span>;
+<span class="hljs-comment">/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */</span>;
+<span class="hljs-comment">/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */</span>;
+<span class="hljs-comment">/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */</span>;
+
+</code></pre>
+<p><strong>Shops</strong>: Tiendas dentro de <a href="shopception.tk">ShopCeption</a></p>
+<pre><code class="hljs github-gist-css sql"><span class="hljs-comment">-- phpMyAdmin SQL Dump</span>
+<span class="hljs-comment">-- version 4.5.4.1deb2ubuntu2</span>
+<span class="hljs-comment">-- http://www.phpmyadmin.net</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Servidor: localhost</span>
+<span class="hljs-comment">-- Tiempo de generación: 11-06-2017 a las 11:51:55</span>
+<span class="hljs-comment">-- Versión del servidor: 5.7.17-0ubuntu0.16.04.2</span>
+<span class="hljs-comment">-- Versión de PHP: 7.0.15-0ubuntu0.16.04.4</span>
+
+<span class="hljs-keyword">SET</span> SQL_MODE = <span class="hljs-string">"NO_AUTO_VALUE_ON_ZERO"</span>;
+<span class="hljs-keyword">SET</span> <span class="hljs-keyword">time_zone</span> = <span class="hljs-string">"+00:00"</span>;
+
+
+<span class="hljs-comment">/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */</span>;
+<span class="hljs-comment">/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */</span>;
+<span class="hljs-comment">/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */</span>;
+<span class="hljs-comment">/*!40101 SET NAMES utf8mb4 */</span>;
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Base de datos: `shopception`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">-- --------------------------------------------------------</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Estructura de tabla para la tabla `shops`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`shops`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">UNSIGNED</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">25</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`user_id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`created_at`</span> <span class="hljs-keyword">timestamp</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`updated_at`</span> <span class="hljs-keyword">timestamp</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8mb4 <span class="hljs-keyword">COLLATE</span>=utf8mb4_unicode_ci;
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Volcado de datos para la tabla `shops`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`shops`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>, <span class="hljs-string">`user_id`</span>, <span class="hljs-string">`created_at`</span>, <span class="hljs-string">`updated_at`</span>) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-number">1</span>, <span class="hljs-string">'Tralara'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>),
+(<span class="hljs-number">2</span>, <span class="hljs-string">'Troloro'</span>, <span class="hljs-number">2</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>, <span class="hljs-string">'2017-06-05 22:00:00'</span>),
+(<span class="hljs-number">7</span>, <span class="hljs-string">'Electronica24'</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'2017-06-09 08:19:16'</span>, <span class="hljs-string">'2017-06-09 08:19:16'</span>),
+(<span class="hljs-number">8</span>, <span class="hljs-string">'Electronica24'</span>, <span class="hljs-number">4</span>, <span class="hljs-string">'2017-06-09 08:19:50'</span>, <span class="hljs-string">'2017-06-09 08:19:50'</span>),
+(<span class="hljs-number">9</span>, <span class="hljs-string">'Sardina'</span>, <span class="hljs-number">5</span>, <span class="hljs-string">'2017-06-09 19:29:33'</span>, <span class="hljs-string">'2017-06-09 19:29:33'</span>),
+(<span class="hljs-number">10</span>, <span class="hljs-string">'Paquito69'</span>, <span class="hljs-number">6</span>, <span class="hljs-string">'2017-06-10 09:17:34'</span>, <span class="hljs-string">'2017-06-10 09:17:34'</span>),
+(<span class="hljs-number">11</span>, <span class="hljs-string">'flori'</span>, <span class="hljs-number">7</span>, <span class="hljs-string">'2017-06-10 14:50:47'</span>, <span class="hljs-string">'2017-06-10 14:50:47'</span>),
+(<span class="hljs-number">12</span>, <span class="hljs-string">'pepe'</span>, <span class="hljs-number">8</span>, <span class="hljs-string">'2017-06-10 19:54:01'</span>, <span class="hljs-string">'2017-06-10 19:54:01'</span>),
+(<span class="hljs-number">13</span>, <span class="hljs-string">'Mapache'</span>, <span class="hljs-number">9</span>, <span class="hljs-string">'2017-06-10 20:24:25'</span>, <span class="hljs-string">'2017-06-10 20:24:25'</span>);
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Índices para tablas volcadas</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Indices de la tabla `shops`</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`shops`</span>
+  <span class="hljs-keyword">ADD</span> PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>);
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- AUTO_INCREMENT de las tablas volcadas</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- AUTO_INCREMENT de la tabla `shops`</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`shops`</span>
+  <span class="hljs-keyword">MODIFY</span> <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">UNSIGNED</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT, AUTO_INCREMENT=<span class="hljs-number">14</span>;
+<span class="hljs-comment">/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */</span>;
+<span class="hljs-comment">/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */</span>;
+<span class="hljs-comment">/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */</span>;
+
+</code></pre>
+<p><strong>Users</strong>: Usuarios de <a href="shopception.tk">ShopCeption</a></p>
+<pre><code class="hljs github-gist-css sql"><span class="hljs-comment">-- phpMyAdmin SQL Dump</span>
+<span class="hljs-comment">-- version 4.5.4.1deb2ubuntu2</span>
+<span class="hljs-comment">-- http://www.phpmyadmin.net</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Servidor: localhost</span>
+<span class="hljs-comment">-- Tiempo de generación: 11-06-2017 a las 11:53:03</span>
+<span class="hljs-comment">-- Versión del servidor: 5.7.17-0ubuntu0.16.04.2</span>
+<span class="hljs-comment">-- Versión de PHP: 7.0.15-0ubuntu0.16.04.4</span>
+
+<span class="hljs-keyword">SET</span> SQL_MODE = <span class="hljs-string">"NO_AUTO_VALUE_ON_ZERO"</span>;
+<span class="hljs-keyword">SET</span> <span class="hljs-keyword">time_zone</span> = <span class="hljs-string">"+00:00"</span>;
+
+
+<span class="hljs-comment">/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */</span>;
+<span class="hljs-comment">/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */</span>;
+<span class="hljs-comment">/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */</span>;
+<span class="hljs-comment">/*!40101 SET NAMES utf8mb4 */</span>;
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Base de datos: `shopception`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">-- --------------------------------------------------------</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Estructura de tabla para la tabla `users`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`users`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">UNSIGNED</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">25</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`surname`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">50</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`email`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">75</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`user`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`shop_id`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`password`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">256</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`created_at`</span> <span class="hljs-keyword">timestamp</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`updated_at`</span> <span class="hljs-keyword">timestamp</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`remember_token`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">100</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8mb4 <span class="hljs-keyword">COLLATE</span>=utf8mb4_unicode_ci;
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Volcado de datos para la tabla `users`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`users`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>, <span class="hljs-string">`surname`</span>, <span class="hljs-string">`email`</span>, <span class="hljs-string">`user`</span>, <span class="hljs-string">`shop_id`</span>, <span class="hljs-string">`password`</span>, <span class="hljs-string">`created_at`</span>, <span class="hljs-string">`updated_at`</span>, <span class="hljs-string">`remember_token`</span>) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-number">1</span>, <span class="hljs-string">'Tralara'</span>, <span class="hljs-string">'Tralara'</span>, <span class="hljs-string">'Tralara@gmail.com'</span>, <span class="hljs-string">'Tralara'</span>, <span class="hljs-string">'1'</span>, <span class="hljs-string">'$2y$10$5LIO8UpDbhSCTew.nr5wpekNwjK3O7iq5Fg5ahWbiJDOF3dnGCvmC'</span>, <span class="hljs-string">'2017-06-06 14:32:50'</span>, <span class="hljs-string">'2017-06-06 14:32:50'</span>, <span class="hljs-string">'5opkOmG5oIL6XFVHOZEu6ppbPMEeZWaIsVQzuWF2q7weoTdty9WFYd64pbQa'</span>),
+(<span class="hljs-number">2</span>, <span class="hljs-string">'Prueba'</span>, <span class="hljs-string">'Prueba'</span>, <span class="hljs-string">'prueba@gmail.com'</span>, <span class="hljs-string">'Prueba'</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-string">'$2y$10$zaRU1Nn51rCnBF8ZDAYZi.2f7BY3XZaUQmDxOkjhSyOeaGDr5c4jq'</span>, <span class="hljs-string">'2017-06-06 16:45:52'</span>, <span class="hljs-string">'2017-06-06 16:45:52'</span>, <span class="hljs-literal">NULL</span>),
+(<span class="hljs-number">4</span>, <span class="hljs-string">'Guten'</span>, <span class="hljs-string">'Guten'</span>, <span class="hljs-string">'mcguten.videos@gmail.com'</span>, <span class="hljs-string">'McGuten'</span>, <span class="hljs-string">'7'</span>, <span class="hljs-string">'$2y$10$f30MBBxEu5t1h44Gi3qyyOEljJu5xFDRtPl0qh4O2WJciE23eOP16'</span>, <span class="hljs-string">'2017-06-09 08:09:35'</span>, <span class="hljs-string">'2017-06-09 08:19:16'</span>, <span class="hljs-string">'nfrHQGOMEULkSBtI54mcY51pg6tZb7NfSSUYjdvNaeSX8zrg2CSVETJzyKh7'</span>),
+(<span class="hljs-number">5</span>, <span class="hljs-string">'Raul'</span>, <span class="hljs-string">'guten'</span>, <span class="hljs-string">'fghrg@gmail.com'</span>, <span class="hljs-string">'Pacos'</span>, <span class="hljs-string">'9'</span>, <span class="hljs-string">'$2y$10$5GmrHoCq8fJTmzFqoZQ0B.ZXd8Jky6pxRM3rStk/I9iXOGvZkhndW'</span>, <span class="hljs-string">'2017-06-09 19:28:41'</span>, <span class="hljs-string">'2017-06-09 19:29:33'</span>, <span class="hljs-literal">NULL</span>),
+(<span class="hljs-number">6</span>, <span class="hljs-string">'Marcos José'</span>, <span class="hljs-string">'Del Monte'</span>, <span class="hljs-string">'marquitos_69@level.com'</span>, <span class="hljs-string">'Marquitos_69'</span>, <span class="hljs-string">'10'</span>, <span class="hljs-string">'$2y$10$LlCUK.69dt30FquS65f8Desj11RJ9lLKb6u/26Vq4bZIoEVBO36NK'</span>, <span class="hljs-string">'2017-06-10 09:14:57'</span>, <span class="hljs-string">'2017-06-10 09:17:34'</span>, <span class="hljs-string">'XCRQroWkWr8aakwjL5v2ln4MpP4jCcROE2cebXNcWnCb2wOunP0kQ9OQ4KZV'</span>),
+(<span class="hljs-number">7</span>, <span class="hljs-string">'huhuhuhuh'</span>, <span class="hljs-string">'$átomico'</span>, <span class="hljs-string">'unemail@hotmail.com'</span>, <span class="hljs-string">'/select * from user'</span>, <span class="hljs-string">'11'</span>, <span class="hljs-string">'$2y$10$tbaGzI2kscHQeX2ThImkzu04yyZMk.xV9ThH6iBImx.ctWHJ0ja7q'</span>, <span class="hljs-string">'2017-06-10 14:47:58'</span>, <span class="hljs-string">'2017-06-10 14:50:47'</span>, <span class="hljs-literal">NULL</span>),
+(<span class="hljs-number">8</span>, <span class="hljs-string">'Pepe'</span>, <span class="hljs-string">'ole'</span>, <span class="hljs-string">'pepe@gmail.com'</span>, <span class="hljs-string">'pepe'</span>, <span class="hljs-string">'12'</span>, <span class="hljs-string">'$2y$10$QWQvakRm1UnhuVbZToiDyOsDCFRSzCuXEfEWiqFhtqE/wYn6Qe1YS'</span>, <span class="hljs-string">'2017-06-10 19:53:56'</span>, <span class="hljs-string">'2017-06-10 19:54:01'</span>, <span class="hljs-literal">NULL</span>),
+(<span class="hljs-number">9</span>, <span class="hljs-string">'Mapache'</span>, <span class="hljs-string">'TralaraMapache'</span>, <span class="hljs-string">'Mapache@gmail.com'</span>, <span class="hljs-string">'Mapache'</span>, <span class="hljs-string">'13'</span>, <span class="hljs-string">'$2y$10$q9PjkZYcHMQq/qUfsbutMeX.mc3IBQRqMMhOTWIlY.Z/67iWT.FTe'</span>, <span class="hljs-string">'2017-06-10 20:24:13'</span>, <span class="hljs-string">'2017-06-10 20:24:25'</span>, <span class="hljs-literal">NULL</span>);
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Índices para tablas volcadas</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Indices de la tabla `users`</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`users`</span>
+  <span class="hljs-keyword">ADD</span> PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>);
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- AUTO_INCREMENT de las tablas volcadas</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- AUTO_INCREMENT de la tabla `users`</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`users`</span>
+  <span class="hljs-keyword">MODIFY</span> <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">UNSIGNED</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT, AUTO_INCREMENT=<span class="hljs-number">10</span>;
+<span class="hljs-comment">/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */</span>;
+<span class="hljs-comment">/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */</span>;
+<span class="hljs-comment">/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */</span>;
+
+</code></pre>
+<p><strong>Migrations</strong>: Tabla usada para hacer las migrations de Laravel</p>
+<pre><code class="hljs github-gist-css sql"><span class="hljs-comment">-- phpMyAdmin SQL Dump</span>
+<span class="hljs-comment">-- version 4.5.4.1deb2ubuntu2</span>
+<span class="hljs-comment">-- http://www.phpmyadmin.net</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Servidor: localhost</span>
+<span class="hljs-comment">-- Tiempo de generación: 11-06-2017 a las 11:55:53</span>
+<span class="hljs-comment">-- Versión del servidor: 5.7.17-0ubuntu0.16.04.2</span>
+<span class="hljs-comment">-- Versión de PHP: 7.0.15-0ubuntu0.16.04.4</span>
+
+<span class="hljs-keyword">SET</span> SQL_MODE = <span class="hljs-string">"NO_AUTO_VALUE_ON_ZERO"</span>;
+<span class="hljs-keyword">SET</span> <span class="hljs-keyword">time_zone</span> = <span class="hljs-string">"+00:00"</span>;
+
+
+<span class="hljs-comment">/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */</span>;
+<span class="hljs-comment">/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */</span>;
+<span class="hljs-comment">/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */</span>;
+<span class="hljs-comment">/*!40101 SET NAMES utf8mb4 */</span>;
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Base de datos: `shopception`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">-- --------------------------------------------------------</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Estructura de tabla para la tabla `migrations`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`migrations`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">UNSIGNED</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`migration`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">COLLATE</span> utf8mb4_unicode_ci <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`batch`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8mb4 <span class="hljs-keyword">COLLATE</span>=utf8mb4_unicode_ci;
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Volcado de datos para la tabla `migrations`</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`migrations`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`migration`</span>, <span class="hljs-string">`batch`</span>) <span class="hljs-keyword">VALUES</span>
+(<span class="hljs-number">31</span>, <span class="hljs-string">'2014_10_12_000000_create_users_table'</span>, <span class="hljs-number">1</span>),
+(<span class="hljs-number">32</span>, <span class="hljs-string">'2014_10_12_100000_create_password_resets_table'</span>, <span class="hljs-number">1</span>),
+(<span class="hljs-number">33</span>, <span class="hljs-string">'2017_06_04_101708_items'</span>, <span class="hljs-number">1</span>),
+(<span class="hljs-number">34</span>, <span class="hljs-string">'2017_06_04_112554_shop'</span>, <span class="hljs-number">1</span>);
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Índices para tablas volcadas</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- Indices de la tabla `migrations`</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`migrations`</span>
+  <span class="hljs-keyword">ADD</span> PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>);
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- AUTO_INCREMENT de las tablas volcadas</span>
+<span class="hljs-comment">--</span>
+
+<span class="hljs-comment">--</span>
+<span class="hljs-comment">-- AUTO_INCREMENT de la tabla `migrations`</span>
+<span class="hljs-comment">--</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`migrations`</span>
+  <span class="hljs-keyword">MODIFY</span> <span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">UNSIGNED</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> AUTO_INCREMENT, AUTO_INCREMENT=<span class="hljs-number">35</span>;
+<span class="hljs-comment">/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */</span>;
+<span class="hljs-comment">/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */</span>;
+<span class="hljs-comment">/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */</span>;
+
+</code></pre>
+<h2 id="descripcion-de-los-procesos"><strong>Descripción de los procesos</strong></h2>
+<h2 id="mapa-de-navegacion"><strong>Mapa de navegación</strong></h2>
+<ul>
+<li>
+<p><strong>/</strong>: Hace referencia al index de la aplicacion <a href="shopception.tk">ShopCeption</a></p>
+</li>
+<li>
+<p><strong>settings</strong>: Hace referencia al panel de administrador del usuario, donde puede cambiar sus preferencias y datos. <a href="shopception.tk/settings">ShopCeption/settings</a></p>
+</li>
+<li>
+<p><strong>edit</strong>: Hace referencia al link donde se envia el formulario de settings.</p>
+</li>
+<li>
+<p><strong>form</strong>: Hace referencia al formulario para añadir los items a la tienda <a href="shopception.tk/form">ShopCeption/form</a></p>
+</li>
+<li>
+<p><strong>additems</strong>: Hace referencia al link donde se envia el formulario de añadir items.</p>
+</li>
+<li>
+<p><strong>tienda/{tienda}/items</strong>: Hace referencia a la lista de los items para una tienda en formato JSON <a href="shopception.tk/tienda/Electronica24/items">ShopCeption/tienda/Electronica24/items</a></p>
+</li>
+<li>
+<p><strong>tienda/{tienda}</strong>: Hace referencia a la vista principal de la tienda <a href="shopception.tk/tienda/Electronica24">ShopCeption/tienda/Electronica24</a></p>
+</li>
+<li>
+<p><strong>tienda/{tienda}/datos</strong>: Hace referencia al nombre de la tienda y el usuario propietario de ella en formato JSON <a href="shopception.tk/tienda/Electronica24/datos">ShopCeption/tienda/Electronica24/datos</a></p>
+</li>
+<li>
+<p><strong>creartiendanueva</strong>: Hace referencia al formulario para añadir una tienda <a href="shopception.tk">ShopCeption</a></p>
+</li>
+<li>
+<p><strong>tienda/add</strong>: Hace referencia al link donde se envia el formulario de añadir la tienda.</p>
+</li>
+</ul>
+<pre><code class="hljs github-gist-css php"><span class="hljs-meta">&lt;?php</span>
+
+<span class="hljs-comment">/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/</span>
+Route::get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> view(<span class="hljs-string">'welcome'</span>);
+});
+
+Route::get(<span class="hljs-string">'settings'</span>, <span class="hljs-string">'HomeController@settings'</span>);
+
+Route::get(<span class="hljs-string">'form'</span>, <span class="hljs-string">'HomeController@form'</span>);
+
+Route::post(<span class="hljs-string">'edit'</span>, <span class="hljs-string">'HomeController@edit'</span>);
+
+Route::post(<span class="hljs-string">'additems'</span>, <span class="hljs-string">'HomeController@additems'</span>);
+
+Route::get(<span class="hljs-string">'tienda/{tienda}/items'</span>, <span class="hljs-string">'ShopController@tienda'</span>);
+
+Route::get(<span class="hljs-string">'tienda/{tienda}'</span>, <span class="hljs-string">'ShopController@home'</span>);
+
+Route::get(<span class="hljs-string">'tienda/{tienda}/datos'</span>, <span class="hljs-string">'ShopController@datos'</span>);
+
+Route::post(<span class="hljs-string">'tienda/add'</span>, <span class="hljs-string">'ShopController@add'</span>);
+
+Route::get(<span class="hljs-string">'creartiendanueva'</span>, <span class="hljs-string">'ShopController@nueva'</span>);
+</code></pre>
+<h2 id="codigo-de-los-modulos-y-captura-de-pantallas"><strong>Código de los módulos y captura de pantallas</strong></h2>
+<h3 id="laravel"><strong>Laravel</strong></h3>
+<p><strong>Ejemplo de un controller</strong>: controla toda la pagina principal</p>
+<pre><code class="hljs github-gist-css php"><span class="hljs-meta">&lt;?php</span>
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">ShopCeption</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>;
+
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">DB</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">Auth</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Request</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">ShopCeption</span>\<span class="hljs-title">User</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">ShopCeption</span>\<span class="hljs-title">Shop</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">ShopCeption</span>\<span class="hljs-title">Items</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">ShopCeption</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>\<span class="hljs-title">Controller</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Session</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Redirect</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HomeController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span><span class="hljs-params">()</span>
+    </span>{
+      <span class="hljs-keyword">$this</span>-&gt;middleware(<span class="hljs-string">'auth'</span>);
+  }
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">index</span><span class="hljs-params">()</span>
+  </span>{
+     $id = Auth::user()-&gt;id;
+     $user = DB::table(<span class="hljs-string">'users'</span>)-&gt;where(<span class="hljs-string">'id'</span>, $id)-&gt;first();
+     <span class="hljs-keyword">return</span> view(<span class="hljs-string">'home'</span>, [<span class="hljs-string">'user'</span> =&gt; $user]);
+ }
+
+ <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">settings</span><span class="hljs-params">(Request $request)</span>
+ </span>{
+     <span class="hljs-keyword">return</span> view(<span class="hljs-string">'settings'</span>, [<span class="hljs-string">'request'</span> =&gt; $request]);
+ }
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">form</span><span class="hljs-params">()</span>
+  </span>{
+    $tienda = Auth::user()-&gt;shop-&gt;name;
+    <span class="hljs-keyword">return</span> view(<span class="hljs-string">'shop.crearitems'</span>, [<span class="hljs-string">'tienda'</span> =&gt; $tienda]);
+ }
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">additems</span><span class="hljs-params">(Request $request)</span>
+  </span>{
+    <span class="hljs-keyword">$this</span>-&gt;validate($request, [
+          <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'required|alpha_num|max:30|unique:items'</span>,
+          <span class="hljs-string">'price'</span> =&gt; <span class="hljs-string">'required|numeric'</span>,
+          <span class="hljs-string">'currency'</span> =&gt; <span class="hljs-string">'required|String'</span>,
+          <span class="hljs-string">'tag'</span> =&gt; <span class="hljs-string">'required|alpha'</span>,
+          <span class="hljs-string">'stock'</span> =&gt; <span class="hljs-string">'required|numeric'</span>,
+          <span class="hljs-string">'image'</span> =&gt; <span class="hljs-string">'required|URL|max:255'</span>,
+          <span class="hljs-string">'description'</span> =&gt; <span class="hljs-string">'required|String|max:255'</span>,
+      ]);
+    Items::create([
+      <span class="hljs-string">'name'</span> =&gt; $request[<span class="hljs-string">'name'</span>],
+      <span class="hljs-string">'price'</span> =&gt; $request[<span class="hljs-string">'price'</span>],
+      <span class="hljs-string">'currency'</span> =&gt; $request[<span class="hljs-string">'currency'</span>],
+      <span class="hljs-string">'tag'</span> =&gt; $request[<span class="hljs-string">'tag'</span>],
+      <span class="hljs-string">'stock'</span> =&gt; $request[<span class="hljs-string">'stock'</span>],
+      <span class="hljs-string">'image'</span> =&gt; $request[<span class="hljs-string">'image'</span>],
+      <span class="hljs-string">'description'</span> =&gt; $request[<span class="hljs-string">'description'</span>],
+      <span class="hljs-string">'shop_id'</span> =&gt; Auth::user()-&gt;shop-&gt;id,
+    ]);
+    <span class="hljs-keyword">return</span> redirect(<span class="hljs-string">'/'</span>);
+ }
+
+ <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">edit</span><span class="hljs-params">(Request $request)</span>
+ </span>{
+    $user = Auth::user();
+    $user-&gt;fill($request-&gt;all());
+    $user -&gt; password = bcrypt($request-&gt;password);
+    $user-&gt;save();
+    Session::flash(<span class="hljs-string">'message'</span>, <span class="hljs-string">'Usuario editado correctamente'</span>);
+     <span class="hljs-keyword">return</span> view(<span class="hljs-string">'settings'</span>, [<span class="hljs-string">'request'</span> =&gt; $request]);
+ }
+
+}
+
+</code></pre>
+<p><strong>Ejemplo de modelo</strong>: se encarga de definir los atributos para los objetos, en este caso, los usuarios.</p>
+<pre><code class="hljs github-gist-css php"><span class="hljs-meta">&lt;?php</span>
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">ShopCeption</span>;
+
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Notifications</span>\<span class="hljs-title">Notifiable</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Foundation</span>\<span class="hljs-title">Auth</span>\<span class="hljs-title">User</span> <span class="hljs-title">as</span> <span class="hljs-title">Authenticatable</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Authenticatable</span>
+</span>{
+    <span class="hljs-keyword">use</span> <span class="hljs-title">Notifiable</span>;
+    <span class="hljs-keyword">protected</span> $table = <span class="hljs-string">'users'</span>;
+
+    <span class="hljs-comment">/**
+     * The attributes that are mass assignable.
+     *
+     * <span class="hljs-doctag">@var</span> array
+     */</span>
+    <span class="hljs-keyword">protected</span> $fillable = [
+        <span class="hljs-string">'name'</span>, <span class="hljs-string">'surname'</span>,<span class="hljs-string">'email'</span>, <span class="hljs-string">'user'</span>, <span class="hljs-string">'password'</span>
+    ];
+
+    <span class="hljs-comment">/**
+     * The attributes that should be hidden for arrays.
+     *
+     * <span class="hljs-doctag">@var</span> array
+     */</span>
+    <span class="hljs-keyword">protected</span> $hidden = [
+        <span class="hljs-string">'password'</span>, <span class="hljs-string">'remember_token'</span>,
+    ];
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">shop</span> <span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">$this</span>-&gt;hasOne(Shop::class);
+    }
+}
+
+</code></pre>
+<p><strong>Ejemplo de migration</strong>: Se encarga de generar la base de datos.</p>
+<pre><code class="hljs github-gist-css php"><span class="hljs-meta">&lt;?php</span>
+
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">Schema</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Schema</span>\<span class="hljs-title">Blueprint</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Database</span>\<span class="hljs-title">Migrations</span>\<span class="hljs-title">Migration</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CreateUsersTable</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Migration</span>
+</span>{
+    <span class="hljs-comment">/**
+     * Run the migrations.
+     *
+     * <span class="hljs-doctag">@return</span> void
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">up</span><span class="hljs-params">()</span>
+    </span>{
+        Schema::create(<span class="hljs-string">'users'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Blueprint $table)</span> </span>{
+            $table-&gt;increments(<span class="hljs-string">'id'</span>);
+            $table-&gt;string(<span class="hljs-string">'name'</span>,<span class="hljs-number">25</span>);
+            $table-&gt;string(<span class="hljs-string">'surname'</span>,<span class="hljs-number">50</span>);
+            $table-&gt;string(<span class="hljs-string">'email'</span>,<span class="hljs-number">75</span>);
+            $table-&gt;string(<span class="hljs-string">'user'</span>,<span class="hljs-number">20</span>);
+            $table-&gt;string(<span class="hljs-string">'shop_id'</span>)-&gt;nullable();
+            $table-&gt;string(<span class="hljs-string">'password'</span>,<span class="hljs-number">256</span>);
+            $table-&gt;timestamps();
+            $table-&gt;rememberToken();
+
+        });
+    }
+
+    <span class="hljs-comment">/**
+     * Reverse the migrations.
+     *
+     * <span class="hljs-doctag">@return</span> void
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">down</span><span class="hljs-params">()</span>
+    </span>{
+        Schema::dropIfExists(<span class="hljs-string">'users'</span>);
+    }
+}
+</code></pre>
+<p><strong>Ejemplo de vista</strong>: Se encarga de mostrar los datos en este caso, el formulario de registro</p>
+<pre><code class="hljs github-gist-css php">@extends('layouts/main')
+
+@section('container')
+&lt;div class="container"&gt;
+&lt;div class="col 12"&gt;
+    &lt;form class="col s12 l8" role="form" method="POST" action="{{ route('register') }}"&gt;
+        {{ csrf_field() }}
+        &lt;div class="row"&gt;
+
+            &lt;div class="form-group{{ $errors-&gt;has('name') ? ' has-error' : '' }}"&gt;
+
+                &lt;div class="input-field col s6"&gt;
+                    &lt;i class="material-icons prefix"&gt;account_circle&lt;/i&gt;
+                    &lt;input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus&gt;
+                    &lt;label for="name" class="col-md-4 control-label"&gt;Nombre&lt;/label&gt;
+
+
+                    @if ($errors-&gt;has('name'))
+                    &lt;span class="help-block"&gt;
+                        &lt;strong&gt;{{ $errors-&gt;first('name') }}&lt;/strong&gt;
+                    &lt;/span&gt;
+                    @endif
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class="form-group{{ $errors-&gt;has('surname') ? ' has-error' : '' }}"&gt;
+                &lt;div class="input-field col s6"&gt;
+                    &lt;input id="surname" type="text" class="form-control" name="surname" value="{{ old('surname') }}" required &gt;
+                    &lt;label for="surname" class="col-md-4 control-label"&gt;Apellidos&lt;/label&gt;
+
+
+                    @if ($errors-&gt;has('surname'))
+                    &lt;span class="help-block"&gt;
+                        &lt;strong&gt;{{ $errors-&gt;first('surname') }}&lt;/strong&gt;
+                    &lt;/span&gt;
+                    @endif
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row"&gt;
+
+            &lt;div class="form-group{{ $errors-&gt;has('user') ? ' has-error' : '' }}"&gt;
+                &lt;div class="input-field col s12"&gt;
+                    &lt;i class="material-icons prefix"&gt;assignment_ind&lt;/i&gt;
+                    &lt;input id="user" type="text" class="form-control" name="user" value="{{ old('user') }}" required &gt;
+                    &lt;label for="user" class="col-md-4 control-label"&gt;Nombre de usuario&lt;/label&gt;
+
+
+                    @if ($errors-&gt;has('user'))
+                    &lt;span class="help-block"&gt;
+                        &lt;strong&gt;{{ $errors-&gt;first('user') }}&lt;/strong&gt;
+                    &lt;/span&gt;
+                    @endif
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row"&gt;
+
+            &lt;div class="form-group{{ $errors-&gt;has('email') ? ' has-error' : '' }}"&gt;
+                &lt;div class="input-field col s12"&gt;
+                    &lt;i class="material-icons prefix"&gt;email&lt;/i&gt;
+                    &lt;input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required&gt;
+                    &lt;label for="email"&gt;Email&lt;/label&gt;
+
+
+                    @if ($errors-&gt;has('email'))
+                    &lt;span class="help-block"&gt;
+                        &lt;strong&gt;{{ $errors-&gt;first('email') }}&lt;/strong&gt;
+                    &lt;/span&gt;
+                    @endif
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row"&gt;
+
+            &lt;div class="form-group{{ $errors-&gt;has('password') ? ' has-error' : '' }}"&gt;
+                &lt;div class="input-field col s6"&gt;
+                    &lt;i class="material-icons prefix"&gt;lock&lt;/i&gt;
+                    &lt;input id="password" type="password" class="form-control" name="password" required&gt;
+                    &lt;label for="password" class="col-md-4 control-label"&gt;Contraseña&lt;/label&gt;
+
+
+                    @if ($errors-&gt;has('password'))
+                    &lt;span class="help-block"&gt;
+                        &lt;strong&gt;{{ $errors-&gt;first('password') }}&lt;/strong&gt;
+                    &lt;/span&gt;
+                    @endif
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;div class="input-field col s6"&gt;
+                    &lt;label for="password-confirm" class="col-md-4 control-label"&gt;Repetir contraseña&lt;/label&gt;
+                    &lt;input id="password-confirm" type="password" class="form-control" name="password_confirmation" required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;div class="col-md-12 col-md-offset-4"&gt;
+                    &lt;button type="submit" class="btn btn-primary"&gt;
+                        Enviar
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+        &lt;/div&gt;
+&lt;/div&gt;
+@endsection
+</code></pre>
+<h3 id="angularjs"><strong>AngularJS</strong></h3>
+<p><strong>Ejemplo de controlador</strong>: Es el controlador de la vista <em>cart</em>.</p>
+<pre><code class="hljs github-gist-css javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-meta">  'use strict'</span>;
+  angular
+    .module(<span class="hljs-string">'app.cartController'</span>, [])
+    .controller(<span class="hljs-string">'cartController'</span>, cartController);
+
+  cartController.$inject = [<span class="hljs-string">'$scope'</span>, <span class="hljs-string">'$location'</span>, <span class="hljs-string">'$rootScope'</span>, <span class="hljs-string">'serviceCookies'</span>,<span class="hljs-string">'servicesData'</span>];
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cartController</span> (<span class="hljs-params">$scope, $location, $rootScope, serviceCookies,servicesData</span>) </span>{
+    $scope.resetCart = resetCart;
+    $scope.removeItem = removeItem;
+
+    init();
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">var</span> cart = [];
+      <span class="hljs-keyword">if</span> (serviceCookies.checkCookie()) {
+        $scope.cart = serviceCookies.getCookiesObject();
+        checkCart();
+        totalPrice();
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">var</span> arr = [];
+        serviceCookies.putCookiesObject(arr);
+        $scope.message = <span class="hljs-literal">false</span>;
+      }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">totalPrice</span>(<span class="hljs-params"></span>)</span>{
+      $scope.totalprice = <span class="hljs-number">0</span>;
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; $scope.cart.length; i++) {
+          $scope.totalprice += $scope.cart[i].price;
+      }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">resetCart</span>(<span class="hljs-params"></span>) </span>{
+      $scope.cart = [];
+      serviceCookies.putCookiesObject($scope.cart);
+      checkCart();
+
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeItem</span>(<span class="hljs-params">item</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(serviceCookies.getCookiesObject());
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; $scope.cart.length; i++) {
+        <span class="hljs-keyword">if</span>($scope.cart[i].product === item.product){
+          <span class="hljs-keyword">var</span> limit = i +<span class="hljs-number">1</span>;
+          $scope.cart.splice(i,limit);
+        }
+      }
+      serviceCookies.putCookiesObject($scope.cart);
+      checkCart();
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkCart</span>(<span class="hljs-params"></span>)</span>{
+      $scope.message = ($scope.cart.length &gt; <span class="hljs-number">0</span>) ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>;
+    }
+}
+
+}());
+</code></pre>
+<p><strong>Ejemplo de ngRoute</strong></p>
+<pre><code class="hljs github-gist-css javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-meta">  'use strict'</span>;
+  angular.module(<span class="hljs-string">'app.config'</span>,[])
+    .config(config);
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">config</span>(<span class="hljs-params">$routeProvider</span>) </span>{
+    $routeProvider
+      .when(<span class="hljs-string">"/items"</span>, {
+        <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">"app/items/items.html"</span>,
+        <span class="hljs-attr">controller</span>: <span class="hljs-string">"itemsController"</span>
+      })
+      .when(<span class="hljs-string">"/cart"</span>, {
+        <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">"app/cart/cart.html"</span>,
+        <span class="hljs-attr">controller</span>: <span class="hljs-string">"cartController"</span>
+      })
+      .otherwise({
+        <span class="hljs-attr">redirectTo</span>: <span class="hljs-string">'/items'</span>
+      });
+  }
+}());
+</code></pre>
+<p><strong>app.js</strong> El archivo donde se crea el modulo y se le añaden los controladores.</p>
+<pre><code class="hljs github-gist-css javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-meta">  'use strict'</span>;
+  angular.module(<span class="hljs-string">'app'</span>, [<span class="hljs-string">'ngRoute'</span>,<span class="hljs-string">'app.config'</span>,<span class="hljs-string">'ngCookies'</span>,<span class="hljs-string">'app.servicesData'</span>,<span class="hljs-string">'app.itemsController'</span>,<span class="hljs-string">'app.serviceCookies'</span>,<span class="hljs-string">'ui.materialize'</span>,<span class="hljs-string">'angular.filter'</span>,<span class="hljs-string">'app.cartController'</span>]);
+}());
+</code></pre>
+<p><strong>Ejemplo de servicio</strong> El archivo donde pondremos los metodos que compartiremos con varios controladores</p>
+<pre><code class="hljs github-gist-css javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-meta">  'use strict'</span>;
+  angular
+    .module(<span class="hljs-string">'app.serviceCookies'</span>,[])
+    .factory(<span class="hljs-string">'serviceCookies'</span>, serviceCookies);
+
+  serviceCookies.$inject = [<span class="hljs-string">'$cookies'</span>];
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serviceCookies</span>(<span class="hljs-params">$cookies</span>) </span>{
+
+    <span class="hljs-keyword">var</span> cookiesFunctions = {
+      <span class="hljs-attr">setCookies</span>:setCookies,
+      <span class="hljs-attr">getCookies</span>:getCookies,
+      <span class="hljs-attr">getCookiesObject</span>:getCookiesObject,
+      <span class="hljs-attr">setCookiesItem</span>:setCookiesItem,
+      <span class="hljs-attr">checkCookie</span>:checkCookie,
+      <span class="hljs-attr">putCookiesObject</span>:putCookiesObject,
+      <span class="hljs-attr">removeCookie</span>:removeCookie
+    };
+
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setCookies</span>(<span class="hljs-params"></span>) </span>{
+        $cookies.put(<span class="hljs-string">"anonymous"</span>, []);
+      }
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setCookiesItem</span>(<span class="hljs-params">item</span>) </span>{
+        <span class="hljs-keyword">var</span> cart = $cookies.getObject(<span class="hljs-string">'anonymous'</span>) || [];
+        cart.push(item);
+        $cookies.putObject(<span class="hljs-string">"anonymous"</span>, cart);
+      }
+
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCookies</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> $cookies.get(<span class="hljs-string">'anonymous'</span>);
+      }
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCookiesObject</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> $cookies.getObject(<span class="hljs-string">'anonymous'</span>);
+      }
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">putCookiesObject</span>(<span class="hljs-params">cart</span>) </span>{
+        <span class="hljs-keyword">return</span> $cookies.putObject(<span class="hljs-string">'anonymous'</span>,cart);
+      }
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkCookie</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">var</span> result = ($cookies.get(<span class="hljs-string">'anonymous'</span>) !== <span class="hljs-literal">undefined</span>) ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">return</span> result;
+      }
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeCookie</span>(<span class="hljs-params"></span>) </span>{
+        $cookies.remove(<span class="hljs-string">'anonymous'</span>);
+      }
+      <span class="hljs-keyword">return</span> cookiesFunctions;
+  }
+
+}());
+</code></pre>
+<h2 id="recursos-y-bibliografia-utilizada"><strong>Recursos y bibliografía utilizada</strong></h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.4">Laravel Documentacion</a></li>
+<li><a href="https://docs.angularjs.org/api">AngularJS Documentacion</a></li>
+<li><a href="https://stackoverflow.com">StackOverFlow</a></li>
+<li><a href="https://www.youtube.com">Videos</a></li>
+<li><a href="https://www.pluralsight.com">PluralSight Cursos</a></li>
+</ul>
+<h2 id="observaciones-y-comentarios"><strong>Observaciones y comentarios</strong></h2>
+<ul>
+<li>Aprendizaje para usar FrameWorks</li>
+<li>Estructura MVC</li>
+<li>Conectar la tienda en AngularJS con Laravel
+<ul>
+<li>Descubrir donde se hacia el despliegue de la vista para poder conectar con la tienda en AngularJS</li>
+</ul>
+</li>
+<li>Usar rutas de Laravel y AngularJS a la vez
+<ul>
+<li>Descubrir la forma de que no se pisen unas a otras.</li>
+</ul>
+</li>
+<li>Conexiones AJAX
+<ul>
+<li>No se permitia la conexion por falta de las cabeceras CORS</li>
+</ul>
+</li>
+</ul>
+
+</div></body>
+</html>
